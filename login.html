@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In · Blue & Pink</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="login">
+  <div class="auth-screen" id="loginScreen">
+<div class="auth-logo">🌸</div>
+<div class="auth-title">Welcome back</div>
+<div class="auth-subtitle">sign in to your blue &amp; pink space</div>
+<div class="auth-error" id="loginError"></div>
+<div class="auth-field">
+<label for="loginUsername">username</label>
+<input autocomplete="username" id="loginUsername" placeholder="your username" type="text"/>
+</div>
+<div class="auth-field">
+<label for="loginPassword">password</label>
+<input autocomplete="current-password" id="loginPassword" placeholder="••••••••" type="password"/>
+</div>
+<button class="auth-btn" id="loginBtn">sign in</button>
+<div class="auth-switch">
+      new here? <a id="goToSignup">create an account</a>
+</div>
+</div>
+  <script src="app.js"></script>
+</body>
+</html>

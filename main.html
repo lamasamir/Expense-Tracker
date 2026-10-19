@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blue & Pink · Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="main">
+  <div class="tracker" id="appScreen">
+<!-- user bar -->
+<div class="user-bar">
+<div class="user-chip">
+<div class="mini-avatar" id="miniAvatar">U</div>
+<div class="mini-name" id="miniName">user</div>
+</div>
+<button class="logout-btn" id="logoutBtn">⏻ log out</button>
+</div>
+<!-- profile -->
+<div class="profile-card">
+<div class="avatar" id="avatar">👤</div>
+<div class="profile-info">
+<div class="profile-name-row">
+<div class="profile-name" id="profileName">Welcome back!</div>
+<button class="edit-profile-btn" id="editProfileBtn">✎ edit</button>
+</div>
+<div class="profile-meta">
+<span>💼 <strong id="profileOccupation">Set your name</strong></span>
+<span>📊 <strong id="profileSince">New member</strong></span>
+</div>
+</div>
+</div>
+<!-- stats -->
+<div class="stats-grid">
+<div class="stat-box income">
+<div class="stat-label">📥 Income</div>
+<div class="stat-value" id="statIncome">$0.00</div>
+</div>
+<div class="stat-box expense">
+<div class="stat-label">📤 Expenses</div>
+<div class="stat-value" id="statExpense">$0.00</div>
+</div>
+<div class="stat-box balance" id="statBalanceBox">
+<div class="stat-label">⚖️ Balance</div>
+<div class="stat-value" id="statBalance">$0.00</div>
+</div>
+<div class="stat-box">
+<div class="stat-label">📆 Transactions</div>
+<div class="stat-value" id="statCount">0</div>
+</div>
+</div>
+<!-- header -->
+<div class="header">
+<h1><span>🌸</span> expense tracker</h1>
+<div class="month-picker">
+<label for="monthPicker">month</label>
+<input id="monthPicker" type="month"/>
+</div>
+</div>
+<!-- tabs -->
+<div class="tabs">
+<button class="tab-btn active" id="tabExpense">💸 Expenses</button>
+<button class="tab-btn" id="tabIncome">💰 Income</button>
+</div>
+<!-- expense form -->
+<div class="expense-form hidden" id="expenseFormWrap">
+<div class="input-group">
+<label for="expenseName">description</label>
+<input autocomplete="off" id="expenseName" placeholder="e.g. coffee, books" type="text"/>
+</div>
+<div class="input-group">
+<label for="expenseCategory">category</label>
+<select id="expenseCategory">
+<option value="Food">🍔 Food</option>
+<option value="Transport">🚗 Transport</option>
+<option value="Shopping">🛍️ Shopping</option>
+<option value="Bills">🧾 Bills</option>
+<option value="Entertainment">🎬 Entertainment</option>
+<option value="Health">💊 Health</option>
+<option value="Other">📦 Other</option>
+</select>
+</div>
+<div class="input-group">
+<label for="expenseAmount">amount</label>
+<input id="expenseAmount" min="0.01" placeholder="0.00" step="0.01" type="number"/>
+</div>
+<button class="add-btn" id="addExpenseBtn"><span>+</span> add expense</button>
+</div>
+<!-- income form -->
+<div class="expense-form hidden" id="incomeFormWrap">
+<div class="input-group">
+<label for="incomeName">source</label>
+<input autocomplete="off" id="incomeName" placeholder="e.g. salary, freelance" type="text"/>
+</div>
+<div class="input-group">
+<label for="incomeCategory">category</label>
+<select id="incomeCategory">
+<option value="Salary">💼 Salary</option>
+<option value="Freelance">💻 Freelance</option>
+<option value="Business">🏢 Business</option>
+<option value="Investment">📈 Investment</option>
+<option value="Gift">🎁 Gift</option>
+<option value="Other Income">📦 Other</option>
+</select>
+</div>
+<div class="input-group">
+<label for="incomeAmount">amount</label>
+<input id="incomeAmount" min="0.01" placeholder="0.00" step="0.01" type="number"/>
+</div>
+<button class="add-btn income-btn" id="addIncomeBtn"><span>+</span> add income</button>
+</div>
+<!-- expense list -->
+<div class="list-section" id="expenseListSection">
+<div class="list-header">
+<div class="list-title">🧾 expense records</div>
+<div class="list-count" id="expenseCount">0 items</div>
+</div>
+<ul class="item-list" id="expenseList"></ul>
+</div>
+<!-- income list -->
+<div class="list-section hidden" id="incomeListSection">
+<div class="list-header">
+<div class="list-title">💰 income records</div>
+<div class="list-count" id="incomeCount">0 items</div>
+</div>
+<ul class="item-list" id="incomeList"></ul>
+</div>
+<div class="footer-note">
+<span>✧</span> blue &amp; pink vibes <span>✧</span>
+</div>
+</div>
+  <script src="app.js"></script>
+</body>
+</html>

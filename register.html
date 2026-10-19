@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account · Blue & Pink</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="register">
+  <div class="auth-screen hidden" id="signupScreen">
+<div class="auth-logo">✨</div>
+<div class="auth-title">Create account</div>
+<div class="auth-subtitle">your own private expense space</div>
+<div class="auth-error" id="signupError"></div>
+<div class="auth-field">
+<label for="signupUsername">username</label>
+<input autocomplete="username" id="signupUsername" placeholder="choose a username" type="text"/>
+</div>
+<div class="auth-field">
+<label for="signupPassword">password</label>
+<input autocomplete="new-password" id="signupPassword" placeholder="at least 4 characters" type="password"/>
+</div>
+<div class="auth-field">
+<label for="signupPassword2">confirm password</label>
+<input autocomplete="new-password" id="signupPassword2" placeholder="repeat password" type="password"/>
+</div>
+<button class="auth-btn" id="signupBtn">create account</button>
+<div class="auth-switch">
+      already have an account? <a id="goToLogin">sign in</a>
+</div>
+</div>
+  <script src="app.js"></script>
+</body>
+</html>
